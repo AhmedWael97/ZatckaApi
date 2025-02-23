@@ -1,0 +1,7 @@
+E:\coupons\githubs\ZatckaAPI\obj\Debug\net6.0\ZatckaAPI.csproj.AssemblyReference.cache
+E:\coupons\githubs\ZatckaAPI\obj\Debug\net6.0\ZatckaAPI.GeneratedMSBuildEditorConfig.editorconfig
+E:\coupons\githubs\ZatckaAPI\obj\Debug\net6.0\ZatckaAPI.AssemblyInfoInputs.cache
+E:\coupons\githubs\ZatckaAPI\obj\Debug\net6.0\ZatckaAPI.AssemblyInfo.cs
+E:\coupons\githubs\ZatckaAPI\obj\Debug\net6.0\ZatckaAPI.csproj.CoreCompileInputs.cache
+E:\coupons\githubs\ZatckaAPI\obj\Debug\net6.0\ZatckaAPI.MvcApplicationPartsAssemblyInfo.cs
+E:\coupons\githubs\ZatckaAPI\obj\Debug\net6.0\ZatckaAPI.MvcApplicationPartsAssemblyInfo.cache

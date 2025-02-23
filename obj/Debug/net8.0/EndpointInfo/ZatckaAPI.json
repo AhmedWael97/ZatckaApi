@@ -1,0 +1,331 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "ZatckaAPI",
+    "version": "1.0"
+  },
+  "paths": {
+    "/generate_csr": {
+      "post": {
+        "tags": [
+          "Test"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CSRRquest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CSRRquest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CSRRquest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/generate_request": {
+      "post": {
+        "tags": [
+          "Test"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/XmlInput"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/XmlInput"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/XmlInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/generate_hash": {
+      "post": {
+        "tags": [
+          "Test"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": { }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": { }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": { }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/generate_qr_code": {
+      "post": {
+        "tags": [
+          "Test"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": { }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": { }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": { }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/sign_e_invoice": {
+      "post": {
+        "tags": [
+          "Test"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SignRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SignRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SignRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/validate_e_invoice": {
+      "post": {
+        "tags": [
+          "Test"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ValidateInvoiceRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ValidateInvoiceRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ValidateInvoiceRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/get_json": {
+      "post": {
+        "tags": [
+          "Test"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "CSRRquest": {
+        "type": "object",
+        "properties": {
+          "csrGenerationDto": {
+            "$ref": "#/components/schemas/CsrGenerationDto"
+          },
+          "environmentType": {
+            "$ref": "#/components/schemas/EnvironmentType"
+          },
+          "pemFormat": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CsrGenerationDto": {
+        "type": "object",
+        "properties": {
+          "commonName": {
+            "type": "string",
+            "nullable": true
+          },
+          "serialNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "organizationIdentifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "organizationUnitName": {
+            "type": "string",
+            "nullable": true
+          },
+          "organizationName": {
+            "type": "string",
+            "nullable": true
+          },
+          "countryName": {
+            "type": "string",
+            "nullable": true
+          },
+          "invoiceType": {
+            "type": "string",
+            "nullable": true
+          },
+          "locationAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "industryBusinessCategory": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EnvironmentType": {
+        "enum": [
+          0,
+          1,
+          2
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "SignRequest": {
+        "type": "object",
+        "properties": {
+          "xmlDocument": {
+            "type": "array",
+            "items": { },
+            "nullable": true
+          },
+          "certificate_content": {
+            "type": "string",
+            "nullable": true
+          },
+          "privateKeyContent": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ValidateInvoiceRequest": {
+        "type": "object",
+        "properties": {
+          "xmlDocument": {
+            "type": "array",
+            "items": { },
+            "nullable": true
+          },
+          "certificateFileContent": {
+            "type": "string",
+            "nullable": true
+          },
+          "pihFileContent": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "XmlInput": {
+        "type": "object",
+        "properties": {
+          "xmlContent": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

@@ -1,0 +1,108 @@
+[
+  {
+    "ContainingType": "ZatckaAPI.Controllers.TestController",
+    "Method": "generate_csr",
+    "RelativePath": "generate_csr",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cSRRquest",
+        "Type": "ZatckaAPI.Model.CSRRquest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZatckaAPI.Controllers.TestController",
+    "Method": "Generate_Hash",
+    "RelativePath": "generate_hash",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "EInvoice",
+        "Type": "System.Xml.XmlDocument",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZatckaAPI.Controllers.TestController",
+    "Method": "generateQrCode",
+    "RelativePath": "generate_qr_code",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "EInvoice",
+        "Type": "System.Xml.XmlDocument",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZatckaAPI.Controllers.TestController",
+    "Method": "Generate_request",
+    "RelativePath": "generate_request",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "EInvoice",
+        "Type": "ZatckaAPI.Model.XmlInput",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZatckaAPI.Controllers.TestController",
+    "Method": "getjsonTest",
+    "RelativePath": "get_json",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZatckaAPI.Controllers.TestController",
+    "Method": "signEInvoice",
+    "RelativePath": "sign_e_invoice",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "signRequest",
+        "Type": "ZatckaAPI.Model.SignRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZatckaAPI.Controllers.TestController",
+    "Method": "validateEInvoice",
+    "RelativePath": "validate_e_invoice",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "validateInvoiceRequest",
+        "Type": "ZatckaAPI.Model.ValidateInvoiceRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
