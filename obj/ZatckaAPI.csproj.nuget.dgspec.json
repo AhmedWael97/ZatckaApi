@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\coupons\\githubs\\ZatckaAPI\\ZatckaAPI.csproj": {}
+    "E:\\coupons\\githubs\\ZatckaAPI\\ZatckaApi\\ZatckaAPI.csproj": {}
   },
   "projects": {
-    "E:\\coupons\\githubs\\ZatckaAPI\\ZatckaAPI.csproj": {
+    "E:\\coupons\\githubs\\ZatckaAPI\\ZatckaApi\\ZatckaAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\coupons\\githubs\\ZatckaAPI\\ZatckaAPI.csproj",
+        "projectUniqueName": "E:\\coupons\\githubs\\ZatckaAPI\\ZatckaApi\\ZatckaAPI.csproj",
         "projectName": "ZatckaAPI",
-        "projectPath": "E:\\coupons\\githubs\\ZatckaAPI\\ZatckaAPI.csproj",
+        "projectPath": "E:\\coupons\\githubs\\ZatckaAPI\\ZatckaApi\\ZatckaAPI.csproj",
         "packagesPath": "C:\\Users\\wael\\.nuget\\packages\\",
-        "outputPath": "E:\\coupons\\githubs\\ZatckaAPI\\obj\\",
+        "outputPath": "E:\\coupons\\githubs\\ZatckaAPI\\ZatckaApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -50,9 +50,25 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "BouncyCastle.Crypto.dll": {
+              "target": "Package",
+              "version": "[1.8.1, )"
+            },
+            "BouncyCastle.Cryptography": {
+              "target": "Package",
+              "version": "[2.5.1, )"
+            },
             "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
               "target": "Package",
               "version": "[1.17.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "Portable.BouncyCastle": {
+              "target": "Package",
+              "version": "[1.9.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

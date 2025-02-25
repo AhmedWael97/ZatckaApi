@@ -76,20 +76,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "array",
-                "items": { }
+                "$ref": "#/components/schemas/XmlInput"
               }
             },
             "text/json": {
               "schema": {
-                "type": "array",
-                "items": { }
+                "$ref": "#/components/schemas/XmlInput"
               }
             },
             "application/*+json": {
               "schema": {
-                "type": "array",
-                "items": { }
+                "$ref": "#/components/schemas/XmlInput"
               }
             }
           }
@@ -110,20 +107,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "array",
-                "items": { }
+                "$ref": "#/components/schemas/XmlInput"
               }
             },
             "text/json": {
               "schema": {
-                "type": "array",
-                "items": { }
+                "$ref": "#/components/schemas/XmlInput"
               }
             },
             "application/*+json": {
               "schema": {
-                "type": "array",
-                "items": { }
+                "$ref": "#/components/schemas/XmlInput"
               }
             }
           }
@@ -190,18 +184,6 @@
             }
           }
         },
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      }
-    },
-    "/get_json": {
-      "post": {
-        "tags": [
-          "Test"
-        ],
         "responses": {
           "200": {
             "description": "Success"
@@ -282,8 +264,7 @@
         "type": "object",
         "properties": {
           "xmlDocument": {
-            "type": "array",
-            "items": { },
+            "type": "string",
             "nullable": true
           },
           "certificate_content": {
@@ -301,8 +282,7 @@
         "type": "object",
         "properties": {
           "xmlDocument": {
-            "type": "array",
-            "items": { },
+            "type": "string",
             "nullable": true
           },
           "certificateFileContent": {

@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Cors.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
-using net.sf.saxon.om;
 using Newtonsoft.Json;
 using System;
 using System.Text;
@@ -72,7 +71,8 @@ namespace ZatckaAPI.Controllers
                 XmlDocument xmlDoc = new XmlDocument();
                 xmlDoc.LoadXml(EInvoice.XmlContent);
                 Zatca.EInvoice.SDK.EInvoiceHashGenerator eInvoiceHashGenerator = new Zatca.EInvoice.SDK.EInvoiceHashGenerator();
-                return Ok(eInvoiceHashGenerator.GenerateEInvoiceHashing(xmlDoc));
+                HashResult hashResult = eInvoiceHashGenerator.GenerateEInvoiceHashing(xmlDoc);
+                return Ok(JsonConvert.SerializeObject(hashResult));
             } catch(Exception e)
             {
                 return StatusCode(500, $"Internal Server Error ${e.Message}");
@@ -91,7 +91,8 @@ namespace ZatckaAPI.Controllers
                 XmlDocument xmlDoc = new XmlDocument();
                 xmlDoc.LoadXml(EInvoice.XmlContent);
                 Zatca.EInvoice.SDK.EInvoiceQRGenerator eInvoiceQRGenerator = new Zatca.EInvoice.SDK.EInvoiceQRGenerator();
-                return Ok(eInvoiceQRGenerator.GenerateEInvoiceQRCode(xmlDoc));
+                QRResult qRResult = eInvoiceQRGenerator.GenerateEInvoiceQRCode(xmlDoc);
+                return Ok(JsonConvert.SerializeObject(qRResult));
             } catch (Exception e)
             {
                 return StatusCode(500, $"Internal Server Error ${e.Message}");
@@ -107,7 +108,8 @@ namespace ZatckaAPI.Controllers
                 XmlDocument xmlDoc = new XmlDocument();
                 xmlDoc.LoadXml(signRequest.xmlDocument);
                 Zatca.EInvoice.SDK.EInvoiceSigner eInvoiceSigner = new Zatca.EInvoice.SDK.EInvoiceSigner();
-                return Ok(eInvoiceSigner.SignDocument(xmlDoc, signRequest.certificate_content, signRequest.privateKeyContent));
+                SignResult signResult = eInvoiceSigner.SignDocument(xmlDoc, signRequest.certificate_content, signRequest.privateKeyContent);
+                return Ok(JsonConvert.SerializeObject(signResult));
             } catch (Exception e)
             {
                 return StatusCode(500, $"Internal Server error ${e.Message}");
@@ -125,7 +127,8 @@ namespace ZatckaAPI.Controllers
                 xmlDoc.LoadXml(validateInvoiceRequest.xmlDocument);
 
                 Zatca.EInvoice.SDK.EInvoiceValidator eInvoiceValidator = new Zatca.EInvoice.SDK.EInvoiceValidator();
-                return Ok(eInvoiceValidator.ValidateEInvoice(xmlDoc, validateInvoiceRequest.certificateFileContent, validateInvoiceRequest.pihFileContent));
+                ValidationResult validationResult = eInvoiceValidator.ValidateEInvoice(xmlDoc, validateInvoiceRequest.certificateFileContent, validateInvoiceRequest.pihFileContent);
+                return Ok(JsonConvert.SerializeObject(validationResult));
             } catch(Exception e)
             {
                 return StatusCode(500, $"Internal Server Error : ${e.Message}");

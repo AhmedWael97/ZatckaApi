@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -10,7 +10,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="BouncyCastle.Crypto.dll" Version="1.8.1" />
+    <PackageReference Include="BouncyCastle.Cryptography" Version="2.5.1" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Portable.BouncyCastle" Version="1.9.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
@@ -49,11 +53,18 @@
       <HintPath>..\nejmi\public\assets\images\people\zatca-einvoicing-sdk-DotNet-238-R3.3.9\zatca-einvoicing-sdk-DotNet-238-R3.3.9\Lib\Dot-Net8\DLL\Zatca.EInvoice.SDK\net8.0\xerces.dll</HintPath>
     </Reference>
     <Reference Include="Zatca.EInvoice.SDK">
-      <HintPath>..\nejmi\public\assets\images\people\zatca-einvoicing-sdk-DotNet-238-R3.3.9\zatca-einvoicing-sdk-DotNet-238-R3.3.9\Lib\Dot-Net8\DLL\Zatca.EInvoice.SDK\net8.0\Zatca.EInvoice.SDK.dll</HintPath>
+      <HintPath>..\..\nejmi\public\assets\images\people\zatca-einvoicing-sdk-DotNet-238-R3.3.9\zatca-einvoicing-sdk-DotNet-238-R3.3.9\Lib\Dot-Net8\DLL\Zatca.EInvoice.SDK\net8.0\Zatca.EInvoice.SDK.dll</HintPath>
     </Reference>
     <Reference Include="Zatca.EInvoice.SDK.Contracts">
-      <HintPath>..\nejmi\public\assets\images\people\zatca-einvoicing-sdk-DotNet-238-R3.3.9\zatca-einvoicing-sdk-DotNet-238-R3.3.9\Lib\Dot-Net8\DLL\Zatca.EInvoice.SDK\net48\Zatca.EInvoice.SDK.Contracts.dll</HintPath>
+      <HintPath>..\..\nejmi\public\assets\images\people\zatca-einvoicing-sdk-DotNet-238-R3.3.9\zatca-einvoicing-sdk-DotNet-238-R3.3.9\Lib\Dot-Net8\DLL\Zatca.EInvoice.SDK\net8.0\Zatca.EInvoice.SDK.Contracts.dll</HintPath>
     </Reference>
+    <Reference Include="Zatca.EInvoice.SDK.Saxon">
+      <HintPath>..\..\nejmi\public\assets\images\people\zatca-einvoicing-sdk-DotNet-238-R3.3.9\zatca-einvoicing-sdk-DotNet-238-R3.3.9\Lib\Dot-Net8\DLL\Zatca.EInvoice.SDK\net8.0\Zatca.EInvoice.SDK.Saxon.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Data\" />
   </ItemGroup>
 
 </Project>

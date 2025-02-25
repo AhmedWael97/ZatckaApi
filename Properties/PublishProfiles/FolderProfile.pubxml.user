@@ -2,8 +2,8 @@
 <!-- https://go.microsoft.com/fwlink/?LinkID=208121. -->
 <Project>
   <PropertyGroup>
-    <_PublishTargetUrl>E:\coupons\githubs\ZatckaAPI\bin\Release\net8.0\publish\</_PublishTargetUrl>
-    <History>True|2025-02-23T16:26:14.2237560Z||;True|2025-02-23T18:03:15.8666269+02:00||;True|2025-02-23T17:43:22.7203498+02:00||;False|2025-02-23T17:41:59.9067965+02:00||;False|2025-02-23T17:41:10.7508325+02:00||;False|2025-02-23T17:40:17.0488590+02:00||;True|2025-02-20T17:41:48.8737562+02:00||;True|2025-02-20T17:40:40.9745811+02:00||;True|2025-02-19T00:54:51.1924025+02:00||;</History>
+    <_PublishTargetUrl>E:\coupons\githubs\ZatckaAPI\ZatckaApi\bin\Release\net8.0\publish\</_PublishTargetUrl>
+    <History>True|2025-02-25T13:50:00.5222614Z||;True|2025-02-23T18:26:14.2237560+02:00||;True|2025-02-23T18:03:15.8666269+02:00||;True|2025-02-23T17:43:22.7203498+02:00||;False|2025-02-23T17:41:59.9067965+02:00||;False|2025-02-23T17:41:10.7508325+02:00||;False|2025-02-23T17:40:17.0488590+02:00||;True|2025-02-20T17:41:48.8737562+02:00||;True|2025-02-20T17:40:40.9745811+02:00||;True|2025-02-19T00:54:51.1924025+02:00||;</History>
     <LastFailureDetails />
   </PropertyGroup>
 </Project>

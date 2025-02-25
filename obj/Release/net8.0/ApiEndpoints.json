@@ -25,7 +25,7 @@
     "Parameters": [
       {
         "Name": "EInvoice",
-        "Type": "System.Xml.XmlDocument",
+        "Type": "ZatckaAPI.Model.XmlInput",
         "IsRequired": true
       }
     ],
@@ -41,7 +41,7 @@
     "Parameters": [
       {
         "Name": "EInvoice",
-        "Type": "System.Xml.XmlDocument",
+        "Type": "ZatckaAPI.Model.XmlInput",
         "IsRequired": true
       }
     ],

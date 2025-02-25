@@ -25,7 +25,7 @@
     "Parameters": [
       {
         "Name": "EInvoice",
-        "Type": "System.Xml.XmlDocument",
+        "Type": "ZatckaAPI.Model.XmlInput",
         "IsRequired": true
       }
     ],
@@ -41,7 +41,7 @@
     "Parameters": [
       {
         "Name": "EInvoice",
-        "Type": "System.Xml.XmlDocument",
+        "Type": "ZatckaAPI.Model.XmlInput",
         "IsRequired": true
       }
     ],
@@ -61,16 +61,6 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ZatckaAPI.Controllers.TestController",
-    "Method": "getjsonTest",
-    "RelativePath": "get_json",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
     "ReturnTypes": []
   },
   {
